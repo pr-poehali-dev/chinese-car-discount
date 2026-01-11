@@ -86,8 +86,8 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { name: "Geely Monjaro", price: "от 2 890 000 ₽", oldPrice: "4 816 000 ₽", features: ["2.0T 238 л.с.", "AWD", "7 мест"], image: "https://cdn.poehali.dev/files/1814552_1_91617_15414834.jpg" },
-              { name: "Chery Tiggo 8 Pro Max", price: "от 2 490 000 ₽", oldPrice: "4 150 000 ₽", features: ["2.0T 192 л.с.", "CVT", "Панорама"], image: null },
-              { name: "Haval Jolion", price: "от 1 890 000 ₽", oldPrice: "3 150 000 ₽", features: ["1.5T 150 л.с.", "DCT", "Круиз-контроль"], image: null },
+              { name: "Chery Tiggo 8 Pro Max", price: "от 2 490 000 ₽", oldPrice: "4 150 000 ₽", features: ["2.0T 192 л.с.", "CVT", "Панорама"], image: "https://cdn.poehali.dev/projects/e41ab9aa-1915-4298-b073-d538cc48fa51/files/a87c9997-cce8-4ea3-ad12-24e56bee87c6.jpg" },
+              { name: "Haval Jolion", price: "от 1 890 000 ₽", oldPrice: "3 150 000 ₽", features: ["1.5T 150 л.с.", "DCT", "Круиз-контроль"], image: "https://cdn.poehali.dev/projects/e41ab9aa-1915-4298-b073-d538cc48fa51/files/aac70056-65ce-4c69-84c9-ffd4a3bdb19a.jpg" },
             ].map((car, idx) => (
               <Card key={idx} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2">
                 <div className="aspect-video bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center overflow-hidden">
