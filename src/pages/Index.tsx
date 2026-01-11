@@ -85,13 +85,17 @@ export default function Index() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "Geely Monjaro", price: "от 2 890 000 ₽", oldPrice: "4 816 000 ₽", features: ["2.0T 238 л.с.", "AWD", "7 мест"] },
-              { name: "Chery Tiggo 8 Pro Max", price: "от 2 490 000 ₽", oldPrice: "4 150 000 ₽", features: ["2.0T 192 л.с.", "CVT", "Панорама"] },
-              { name: "Haval Jolion", price: "от 1 890 000 ₽", oldPrice: "3 150 000 ₽", features: ["1.5T 150 л.с.", "DCT", "Круиз-контроль"] },
+              { name: "Geely Monjaro", price: "от 2 890 000 ₽", oldPrice: "4 816 000 ₽", features: ["2.0T 238 л.с.", "AWD", "7 мест"], image: "https://cdn.poehali.dev/files/1814552_1_91617_15414834.jpg" },
+              { name: "Chery Tiggo 8 Pro Max", price: "от 2 490 000 ₽", oldPrice: "4 150 000 ₽", features: ["2.0T 192 л.с.", "CVT", "Панорама"], image: null },
+              { name: "Haval Jolion", price: "от 1 890 000 ₽", oldPrice: "3 150 000 ₽", features: ["1.5T 150 л.с.", "DCT", "Круиз-контроль"], image: null },
             ].map((car, idx) => (
               <Card key={idx} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2">
-                <div className="aspect-video bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center">
-                  <Icon name="Car" size={80} className="text-primary/20" />
+                <div className="aspect-video bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center overflow-hidden">
+                  {car.image ? (
+                    <img src={car.image} alt={car.name} className="w-full h-full object-cover" />
+                  ) : (
+                    <Icon name="Car" size={80} className="text-primary/20" />
+                  )}
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-2xl font-montserrat font-bold mb-2 text-primary">{car.name}</h3>
